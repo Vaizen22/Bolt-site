@@ -1,0 +1,45 @@
+site:
+  name: "Auto Affiliate SEO Blog"
+  language: "fr"
+  base_url: "${SITE_BASE_URL}"
+  timezone: "Europe/Paris"
+
+content:
+  default_niche: "smart home"
+  candidate_niches:
+    - "smart home"
+    - "fitness maison"
+    - "café et cuisine"
+    - "gaming setup"
+    - "beauté clean"
+  post_frequency: "daily"
+  min_sections: 4
+  secondary_keywords:
+    - comparatif
+    - avis
+    - meilleur prix
+    - guide d'achat
+
+sources:
+  wikipedia: true
+  openfoodfacts: true
+  newsapi: true
+  openweathermap: true
+  scraping_enabled: true
+
+affiliate:
+  legal_disclosure: "Cet article contient des liens d'affiliation. Nous pouvons percevoir une commission sans coût supplémentaire pour vous."
+  templates:
+    amazon: "https://www.amazon.fr/s?k={query}&tag={tag}&linkCode=ll2"
+    awin: "https://www.awin1.com/cread.php?awinmid={awin_id}&awinaffid={subid}&ued={encoded_url}"
+    tradedoubler: "https://clk.tradedoubler.com/click?p={td_id}&a={subid}&url={encoded_url}"
+
+llm:
+  model_name: "distilgpt2"
+  max_new_tokens: 320
+  temperature: 0.85
+
+pipeline:
+  max_candidates: 8
+  output_markdown_dir: "content/posts"
+  output_html_dir: "docs/posts"
