@@ -55,6 +55,7 @@ Projet complet pour générer et publier automatiquement des articles SEO monét
 7. **Publication**:
    - sortie markdown dans `content/posts/`
    - sortie HTML statique dans `docs/posts/`
+   - page d'aperçu visuelle `docs/index.html` (cartes + prévisualisation iframe)
    - workflow GitHub Actions planifié
 
 ## Installation locale
